@@ -1,0 +1,268 @@
+<!-- TODO: update color filter -->
+<!-- TODO: replace placeholder google plus icon with email -->
+<!-- TODO: add more art -->
+<!-- TODO: disable mouse drag opening images -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Art Gallery of Margaret Elizabeth Proveaux</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/css/lightgallery.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" />
+            </div>
+        </header>
+        <div id="lightgallery" class="gallery">
+            <a href="images/1.png" class="gallery-item-1" title="Testing Title 1 2 3...">
+                <img src="images/1.png" alt="Image 1" class="gallery-image" />
+                <img src="images/1.png" alt="Image 1 Filtered" class="gallery-image-filtered" />
+            </a>
+            <a href="images/2.png" class="gallery-item-2">
+                <img src="images/2.png" alt="Image 2" class="gallery-image" />
+                <img src="images/2.png" alt="Image 2 Filtered" class="gallery-image-filtered" />
+            </a>
+            <a href="images/3.png" class="gallery-item-3">
+                <img src="images/3.png" alt="Image 3" class="gallery-image" />
+                <img src="images/3.png" alt="Image 3 Filtered" class="gallery-image-filtered" />
+            </a>
+            <a href="images/4.png" class="gallery-item-4">
+                <img src="images/4.png" alt="Image 4" class="gallery-image" />
+                <img src="images/4.png" alt="Image 4 Filtered" class="gallery-image-filtered" />
+            </a>
+            <a href="images/5.png" class="gallery-item-5">
+                <img src="images/5.png" alt="Image 5" class="gallery-image" />
+                <img src="images/5.png" alt="Image 5 Filtered" class="gallery-image-filtered" />
+            </a>
+            <a href="images/6.png" class="gallery-item-6">
+                <img src="images/6.png" alt="Image 6" class="gallery-image" />
+                <img src="images/6.png" alt="Image 6 Filtered" class="gallery-image-filtered" />
+            </a>
+        </div>
+        <footer>
+            <div class="social">
+                <a href="https://instagram.com/islibbi" title="Instagram">
+                    <img src="images/social-buttons/Instagram.png" alt="Instagram" class="social-image" width="50" />
+                </a>
+                <a href="https://facebook.com/elizabeth.proveaux.3" title="Facebook">
+                    <img src="images/social-buttons/Facebook.png" alt="Facebook" class="social-image" width="50" />
+                </a>
+                <a href="mailto:m.e.proveaux@gmail.com" title="Contact Me">
+                    <img src="images/social-buttons/GooglePlus.png" alt="E-Mail" class="social-image" width="50" />
+                </a>
+            </div>
+            <div class="copyright">
+              Copyright &copy; 2020 Margaret Proveaux
+            </div>
+        </footer>
+    </div>
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGrad">
+                <stop offset="0%" stop-color="#e66465" stop-opacity="0%" />
+                <stop offset="100%" stop-color="#9198e5" stop-opacity="100%" />
+            </linearGradient>
+            <filter id="filter" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feColorMatrix
+                    type="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 1 0"
+                    in="SourceGraphic"
+                    result="grayscale"
+                />
+                <feColorMatrix
+                    type="matrix"
+                    values="1 0 0 0 0
+                            1 0 0 0 0
+                            1 0 0 0 0
+                            0 0 0 1 0"
+                    in="SourceGraphic"
+                    result="test"
+                />
+                <feColorMatrix
+                    type="matrix"
+                    values="0 0 1 0 0
+                            0 0 1 0 0
+                            0 0 1 0 0
+                            0 0 0 1 0"
+                    in="SourceGraphic"
+                    result="test2"
+                />
+                <feComponentTransfer in="test" result="dark-crimson-sepia">
+                    <feFuncR type="table" tableValues="0.01 0.52 0.97"/>
+                    <feFuncG type="table" tableValues="0 0.05 0.81"/>
+                    <feFuncB type="table" tableValues="0.02 0.29 0.61"/>
+                    <feFuncA type="table" tableValues="0 1"/>
+                  </feComponentTransfer>
+                <feComponentTransfer in="grayscale" result="duotone-magenta-gold">
+                    <feFuncR type="table" tableValues="0.7411764706 0.9882352941"></feFuncR>
+                    <feFuncG type="table" tableValues="0.0431372549 0.7333333333"></feFuncG>
+                    <feFuncB type="table" tableValues="0.568627451 0.05098039216"></feFuncB>
+                    <feFuncA type="table" tableValues="0 1"></feFuncA>
+                </feComponentTransfer>
+                <feComponentTransfer in="test2" result="green-pink-acid">
+                    <feFuncR type="table" tableValues="1 0.98 0.1"/>
+                    <feFuncG type="table" tableValues="0.17 1 0.82"/>
+                    <feFuncB type="table" tableValues="0.7 0.84 0.67"/>
+                    <feFuncA type="table" tableValues="0 1"/>
+                </feComponentTransfer>
+                <feComponentTransfer in="grayscale" result="red-sunset">
+                    <feFuncR type="table" tableValues="0.27 0.86 0.97"/>
+                    <feFuncG type="table" tableValues="0.01 0.08 0.81"/>
+                    <feFuncB type="table" tableValues="0.02 0.24 0.05"/>
+                    <feFuncA type="table" tableValues="0 1"/>
+                </feComponentTransfer>
+                <feComponentTransfer in="test" result="componentTransfer">
+                        <feFuncR type="table" tableValues="0.91 0.31 1 0.5 0.09"/>
+                        <feFuncG type="table" tableValues="0.25 0.86 0 0 0.77"/>
+                        <feFuncB type="table" tableValues="0.37 0.43 0.5 1 0.82"/>
+                    <feFuncA type="table" tableValues="0 1"/>
+                </feComponentTransfer>
+                <!-- <feBlend mode="normal" in="dark-crimson-sepia" in2="SourceGraphic" result="blend"/> -->
+                <!-- <feBlend mode="normal" in="duotone-magenta-gold" in2="SourceGraphic" result="blend"/> -->
+                <!-- <feBlend mode="normal" in="green-pink-acid" in2="SourceGraphic" result="blend"/> -->
+                <!-- <feBlend mode="normal" in="red-sunset" in2="SourceGraphic" result="blend"/> -->
+                <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+            </filter>
+        </defs>
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.1.3/dist/js/lightgallery.min.js"></script>
+    <script>
+        const MOUSEOVER = 'mouseover';
+        const MOUSEOUT = 'mouseout';
+
+        if (typeof lightGallery !== 'undefined') {
+            lightGallery(document.getElementById('lightgallery'), {
+                download: false,
+            });
+        }
+
+        const GALLERY_IMAGE = 'gallery-image';
+        const LARGE_IMAGE = 'lg-object lg-image';
+        document.body.addEventListener('contextmenu', function(e) {
+            const { className } = e.target;
+            if (className === LARGE_IMAGE || className === GALLERY_IMAGE) {
+                e.preventDefault();
+            }
+        });
+
+        const unfilteredImages = document.getElementsByClassName(GALLERY_IMAGE);
+        const filteredImages = document.getElementsByClassName('gallery-image-filtered');
+        const logo = document.getElementsByClassName('logo')[0].childNodes[1];
+        const socialImages = document.getElementsByClassName('social-image');
+
+        let hueDegrees = 0;
+        let isRotating = true;
+        const setIsRotatingFalse = function(e) {
+            isRotating = false;
+        };
+        const setIsRotatingTrue = function(e) {
+            isRotating = true;
+        };
+
+        for (let i = 0, { length } = unfilteredImages; i < length; i += 1) {
+            const image = unfilteredImages[i];
+            image.addEventListener(MOUSEOVER, setIsRotatingFalse);
+            image.addEventListener(MOUSEOUT, setIsRotatingTrue);
+        }
+
+        let isFiltering = true;
+
+        const setAllIsFilteringTrue = () => {
+            isFiltering = true;
+            isFilteringLogo = true;
+            isFilteringInstagram = true;
+            isFilteringFacebook = true;
+            isFilteringEmail = true;
+        };
+        
+        const setIsFiltering = () => {
+            setAllIsFilteringTrue();
+
+            isFiltering = window.innerWidth >= 992;
+        };
+
+        let isFilteringLogo = isFiltering;
+        const setIsFilteringLogoFalse = function(e) {
+            setAllIsFilteringTrue();
+
+            isFilteringLogo = false;
+        };
+
+        let isFilteringInstagram = isFiltering;
+        const setIsFilteringInstagramFalse = function(e) {
+            setAllIsFilteringTrue();
+
+            isFilteringInstagram = false;
+        };
+
+        let isFilteringFacebook = isFiltering;
+        const setIsFilteringFacebookFalse = function(e) {
+            setAllIsFilteringTrue();
+
+            isFilteringFacebook = false;
+        };
+
+        let isFilteringEmail = isFiltering;
+        const setIsFilteringEmailFalse = function(e) {
+            setAllIsFilteringTrue();
+
+            isFilteringEmail = false;
+        };
+
+        setIsFiltering();
+        window.addEventListener('resize', setIsFiltering);
+
+        logo.addEventListener(MOUSEOVER, setIsFilteringLogoFalse);
+        logo.addEventListener(MOUSEOUT, setAllIsFilteringTrue);
+
+        const instagram = socialImages[0];
+        instagram.addEventListener(MOUSEOVER, setIsFilteringInstagramFalse);
+        instagram.addEventListener(MOUSEOUT, setAllIsFilteringTrue);
+
+        const facebook = socialImages[1];
+        facebook.addEventListener(MOUSEOVER, setIsFilteringFacebookFalse);
+        facebook.addEventListener(MOUSEOUT, setAllIsFilteringTrue);
+
+        const email = socialImages[2];
+        email.addEventListener(MOUSEOVER, setIsFilteringEmailFalse);
+        email.addEventListener(MOUSEOUT, setAllIsFilteringTrue);
+
+        const setUnfilteredImageFilters = (filter) => {
+            for (let i = 0, { length } = filteredImages; i < length; i += 1) {
+                filteredImages[i].style.filter = isFiltering ? filter : '';
+            }
+
+            logo.style.filter = isFiltering && isFilteringLogo ? filter : '';
+            instagram.style.filter = isFiltering && isFilteringInstagram ? filter : '';
+            facebook.style.filter = isFiltering && isFilteringFacebook ? filter : '';
+            email.style.filter = isFiltering && isFilteringEmail ? filter : '';
+        };
+
+        const VISIBLE = 'visible';
+        const HIDDEN = 'hidden';
+        const setFilteredImagesVisibility = (visible) => {
+            const { length } = filteredImages;
+            for (let i = 0; i < length; i += 1) {
+                filteredImages[i].style.visibility = visible ? VISIBLE : HIDDEN;
+            }
+        };
+
+        const rotateHue = () => {
+            if (!isRotating) return;
+            hueDegrees += 1;
+            setUnfilteredImageFilters(`url(#filter) brightness(0.8) hue-rotate(${hueDegrees}deg)`);
+        };
+
+        setInterval(rotateHue, 50);
+    </script>
+</body>
+</html>
