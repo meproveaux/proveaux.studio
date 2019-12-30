@@ -68,64 +68,18 @@
                 <feColorMatrix
                     type="matrix"
                     values="1 0 0 0 0
-                            0 1 0 0 0
-                            0 0 1 0 0
-                            0 0 0 1 0"
-                    in="SourceGraphic"
-                    result="grayscale"
-                />
-                <feColorMatrix
-                    type="matrix"
-                    values="1 0 0 0 0
                             1 0 0 0 0
                             1 0 0 0 0
                             0 0 0 1 0"
                     in="SourceGraphic"
-                    result="test"
+                    result="colorMatrix"
                 />
-                <feColorMatrix
-                    type="matrix"
-                    values="0 0 1 0 0
-                            0 0 1 0 0
-                            0 0 1 0 0
-                            0 0 0 1 0"
-                    in="SourceGraphic"
-                    result="test2"
-                />
-                <feComponentTransfer in="test" result="dark-crimson-sepia">
-                    <feFuncR type="table" tableValues="0.01 0.52 0.97"/>
-                    <feFuncG type="table" tableValues="0 0.05 0.81"/>
-                    <feFuncB type="table" tableValues="0.02 0.29 0.61"/>
-                    <feFuncA type="table" tableValues="0 1"/>
-                  </feComponentTransfer>
-                <feComponentTransfer in="grayscale" result="duotone-magenta-gold">
-                    <feFuncR type="table" tableValues="0.7411764706 0.9882352941"></feFuncR>
-                    <feFuncG type="table" tableValues="0.0431372549 0.7333333333"></feFuncG>
-                    <feFuncB type="table" tableValues="0.568627451 0.05098039216"></feFuncB>
-                    <feFuncA type="table" tableValues="0 1"></feFuncA>
-                </feComponentTransfer>
-                <feComponentTransfer in="test2" result="green-pink-acid">
-                    <feFuncR type="table" tableValues="1 0.98 0.1"/>
-                    <feFuncG type="table" tableValues="0.17 1 0.82"/>
-                    <feFuncB type="table" tableValues="0.7 0.84 0.67"/>
+                <feComponentTransfer in="colorMatrix" result="componentTransfer">
+                    <feFuncR type="table" tableValues="0.93 1 0.28 0.81 1"/>
+		            <feFuncG type="table" tableValues="0.41 1 0.65 0.55 1"/>
+		            <feFuncB type="table" tableValues="0.69 0.71 0.89 0.92 1"/>
                     <feFuncA type="table" tableValues="0 1"/>
                 </feComponentTransfer>
-                <feComponentTransfer in="grayscale" result="red-sunset">
-                    <feFuncR type="table" tableValues="0.27 0.86 0.97"/>
-                    <feFuncG type="table" tableValues="0.01 0.08 0.81"/>
-                    <feFuncB type="table" tableValues="0.02 0.24 0.05"/>
-                    <feFuncA type="table" tableValues="0 1"/>
-                </feComponentTransfer>
-                <feComponentTransfer in="test" result="componentTransfer">
-                        <feFuncR type="table" tableValues="0.91 0.31 1 0.5 0.09"/>
-                        <feFuncG type="table" tableValues="0.25 0.86 0 0 0.77"/>
-                        <feFuncB type="table" tableValues="0.37 0.43 0.5 1 0.82"/>
-                    <feFuncA type="table" tableValues="0 1"/>
-                </feComponentTransfer>
-                <!-- <feBlend mode="normal" in="dark-crimson-sepia" in2="SourceGraphic" result="blend"/> -->
-                <!-- <feBlend mode="normal" in="duotone-magenta-gold" in2="SourceGraphic" result="blend"/> -->
-                <!-- <feBlend mode="normal" in="green-pink-acid" in2="SourceGraphic" result="blend"/> -->
-                <!-- <feBlend mode="normal" in="red-sunset" in2="SourceGraphic" result="blend"/> -->
                 <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
             </filter>
         </defs>
